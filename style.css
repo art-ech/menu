@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    /* background-color: rgb(189, 119, 134); */
+    background-color: rgb(165, 133, 27);
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+img:hover{
+    transform: scale(90%);
+    cursor: pointer;
+    transition: .25s;
+}
+
+.menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "burger fries"
+    "total total"
+    "checkout checkout";
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 5px solid red;
+    padding: 5px;
+    box-shadow: 10px 10px 10px;
+    font-weight: 900;
+    background-color: palegoldenrod;
+    border-radius: 5%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+progress{
+    font-size: 2rem;
+    width: 100%;
+}
+
+.burger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-area: burger;
+}
+
+.fries{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-area: fries;
+}
+
+.burgerCounter, .friesCounter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.5rem;
+}
+
+button{
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    color: black;
+    background-color: orange;
+}
+
+button:active{
+    transform: scale(90%);
+}
+
+.main{
+    margin: 10px 0px;
+    color: white;
+    background-color: darkred;
+    letter-spacing: 3px;
+    box-shadow: 5px 5px 10px black;
+    padding: 10px 10px;
+    border: 1px solid black;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+.initialPrice{
+    color: black;
+}
+
+#burgerTotal, #friesTotal{
+    padding: 5px;
+    border-radius: 5px;
+    color: dodgerblue;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+.total{
+    grid-area: total;
+    font-size: 1.5rem;
+    color: white;
+    background-color: dodgerblue;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.checkout{
+    grid-area: checkout;
+}
+
+.checkout input{
+    background-color: red;
+    padding: 5px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.checkout input:hover{
+    color: white;
+    background-color: blue;
+}
+
+.checkout input:active{
+    transform: scale(90%);
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1px 50px;
+    bottom: 0;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 550px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+    }
+
+    .header{
+        font-size: 2rem;
+    }
+}
+
